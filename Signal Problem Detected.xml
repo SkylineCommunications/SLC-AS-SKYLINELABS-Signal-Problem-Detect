@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+	<Name>Signal Problem Detected</Name>
+	<Description></Description>
+	<Type>Automation</Type>
+	<Author>SKYLINE2\TiagoPO</Author>
+	<CheckSets>FALSE</CheckSets>
+	<Folder>\Skyline Labs\</Folder>
+
+	<Protocols>
+		<Protocol id="5">
+			<Description>Switch</Description>
+			<Name>Demo switch</Name>
+			<Version>2.0.0.0</Version>
+			<DefaultElement>
+			</DefaultElement>
+		</Protocol>
+		<Protocol id="2">
+			<Description>IRD</Description>
+			<Name>Philips DVS3810</Name>
+			<Version>1.1.0.5-jeroen</Version>
+			<DefaultElement>
+			</DefaultElement>
+		</Protocol>
+	</Protocols>
+
+	<Memory>
+	</Memory>
+
+	<Parameters>
+	</Parameters>
+
+	<Script>
+		<Exe id="1" type="csharp">
+			<Value><![CDATA[[Project:Signal Problem Detected_1]]]></Value>
+			<!--<Param type="debug">true</Param>-->
+			<Message></Message>
+		</Exe>
+	</Script>
+</DMSScript>
