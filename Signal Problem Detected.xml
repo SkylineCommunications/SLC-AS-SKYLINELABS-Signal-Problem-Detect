@@ -9,16 +9,16 @@
 
 	<Protocols>
 		<Protocol id="5">
-			<Description>Switch</Description>
-			<Name>Demo switch</Name>
-			<Version>2.0.0.0</Version>
+			<Description>Site Switch</Description>
+			<Name>Skyline Labs Site Switch</Name>
+			<Version>9001.0.0.2</Version>
 			<DefaultElement>
 			</DefaultElement>
 		</Protocol>
 		<Protocol id="2">
 			<Description>IRD</Description>
 			<Name>Philips DVS3810</Name>
-			<Version>1.1.0.5-jeroen</Version>
+			<Version>Production</Version>
 			<DefaultElement>
 			</DefaultElement>
 		</Protocol>
