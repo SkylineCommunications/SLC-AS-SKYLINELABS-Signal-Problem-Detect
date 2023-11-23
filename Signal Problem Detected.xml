@@ -11,14 +11,14 @@
 		<Protocol id="5">
 			<Description>Site Switch</Description>
 			<Name>Skyline Labs Site Switch</Name>
-			<Version>9001.0.0.2</Version>
+			<Version>Production</Version>
 			<DefaultElement>
 			</DefaultElement>
 		</Protocol>
 		<Protocol id="2">
 			<Description>IRD</Description>
 			<Name>Philips DVS3810</Name>
-			<Version>Production</Version>
+			<Version>9001.0.0.2</Version>
 			<DefaultElement>
 			</DefaultElement>
 		</Protocol>
