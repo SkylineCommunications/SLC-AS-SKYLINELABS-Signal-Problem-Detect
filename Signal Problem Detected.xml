@@ -11,7 +11,7 @@
 		<Protocol id="5">
 			<Description>Site Switch</Description>
 			<Name>Skyline Labs Site Switch</Name>
-			<Version>Production</Version>
+			<Version>1.0.0.5</Version>
 			<DefaultElement>
 			</DefaultElement>
 		</Protocol>
