@@ -20,8 +20,6 @@
     <PackageReference Include="Skyline.DataMiner.Dev.Automation" Version="10.1.0.6" />
   </ItemGroup>
   <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties DisLinkedXmlFile="..\Signal Problem Detected.xml" DisProjectType="automationScriptProject" DisLinkId="1" />
-    </VisualStudio>
+    <VisualStudio><UserProperties DisLinkedXmlFile="..\SAT-DOWN_AS_Signal Problem Detected.xml" DisLinkId="1" DisProjectType="automationScriptProject" /></VisualStudio>
   </ProjectExtensions>
 </Project>

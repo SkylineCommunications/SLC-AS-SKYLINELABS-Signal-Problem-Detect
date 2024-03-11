@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <DMSScript options="272" xmlns="http://www.skyline.be/automation">
-	<Name>Signal Problem Detected</Name>
+	<Name>SAT-DOWN_AS_Signal Problem Detected</Name>
 	<Description></Description>
 	<Type>Automation</Type>
-	<Author>SKYLINE2\TiagoPO</Author>
+	<Author>SKYLINE2\TarikME</Author>
 	<CheckSets>FALSE</CheckSets>
-	<Folder>\Skyline Labs\</Folder>
+	<Folder>\DataMiner Catalog\Apps &amp; Solutions\Satellite Downlink Redundancy</Folder>
 
 	<Protocols>
 		<Protocol id="5">
@@ -18,7 +18,7 @@
 		<Protocol id="2">
 			<Description>IRD</Description>
 			<Name>Philips DVS3810</Name>
-			<Version>9001.0.0.2</Version>
+			<Version>9001.0.1.1</Version>
 			<DefaultElement>
 			</DefaultElement>
 		</Protocol>
@@ -32,7 +32,7 @@
 
 	<Script>
 		<Exe id="1" type="csharp">
-			<Value><![CDATA[[Project:Signal Problem Detected_1]]]></Value>
+			<Value><![CDATA[[Project:SAT-DOWN_AS_Signal Problem Detected_1]]]></Value>
 			<!--<Param type="debug">true</Param>-->
 			<Message></Message>
 		</Exe>

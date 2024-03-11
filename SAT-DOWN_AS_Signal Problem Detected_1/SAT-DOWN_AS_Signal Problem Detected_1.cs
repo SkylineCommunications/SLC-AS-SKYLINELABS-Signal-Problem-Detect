@@ -82,11 +82,11 @@ namespace Signal_Problem_Detected_1
 
 			if (trigger[3] == "MAIN")
 			{
-				Element element = engine.FindElement("IRD_EC_" + trigger[2] + "_BACKUP");
+				Element element = engine.FindElement("SAT-DOWN IRD_EC_" + trigger[2] + "_BACKUP");
 				int LNB1 = Convert.ToInt32(element.GetParameter("LNB1 Supply"));
 				if (LNB1 == 1)
 				{
-					Element Switch = engine.FindElement("Site Switch");
+					Element Switch = engine.FindElement("SAT-DOWN Site Switch");
 					if (trigger[2] == "SITE1")
 					{
 						setParam = "Switch Site 1";
@@ -97,11 +97,12 @@ namespace Signal_Problem_Detected_1
 						setParam = "Switch Site 2";
 						swTo = "SITE1";
 					}
+
 					Switch.SetParameter(setParam, 2);
 				}
 				else
 				{
-					Element Switch = engine.FindElement("Site Switch");
+					Element Switch = engine.FindElement("SAT-DOWN Site Switch");
 					if ((trigger[2] == "SITE1" && Convert.ToString(Switch.GetParameter(300)) == "1") || (trigger[2] == "SITE2" && Convert.ToString(Switch.GetParameter(300)) == "2"))
 					{
 						Switch.SetParameter("Video Selection", "6");
@@ -203,7 +204,7 @@ namespace Signal_Problem_Detected_1
 									// Configure the dialog box
 									uib.RequireResponse = true;
 									uib.RowDefs = "a;a;a";
-									uib.ColumnDefs = "210;200;200";
+									uib.ColumnDefs = "210;200;140";
 
 									// Add a 'StaticText' item to the dialog box
 									UIBlockDefinition blockStaticText = new UIBlockDefinition();
@@ -252,7 +253,7 @@ namespace Signal_Problem_Detected_1
 									// Configure the dialog box
 									uib.RequireResponse = true;
 									uib.RowDefs = "a;a;a";
-									uib.ColumnDefs = "200;200;200";
+									uib.ColumnDefs = "200;200;150";
 
 									// Add a 'StaticText' item to the dialog box
 									UIBlockDefinition blockStaticText = new UIBlockDefinition();
@@ -296,6 +297,7 @@ namespace Signal_Problem_Detected_1
 									swTo = "SITE1";
 									setVal = 1;
 								}
+
 								Switch.SetParameter(setParam, setVal);
 
 
@@ -308,7 +310,7 @@ namespace Signal_Problem_Detected_1
 									// Configure the dialog box
 									uib.RequireResponse = true;
 									uib.RowDefs = "a;a;a";
-									uib.ColumnDefs = "200;200;200";
+									uib.ColumnDefs = "200;200;150";
 
 									// Add a 'StaticText' item to the dialog box
 									UIBlockDefinition blockStaticText = new UIBlockDefinition();
@@ -344,13 +346,12 @@ namespace Signal_Problem_Detected_1
 			}
 			else
 			{
-
-				Element element = engine.FindElement("IRD_EC_" + trigger[2] + "_MAIN");
+				Element element = engine.FindElement("SAT-DOWN IRD_EC_" + trigger[2] + "_MAIN");
 
 				int LNB1 = Convert.ToInt32(element.GetParameter("LNB1 Supply"));
 				if (LNB1 == 1)
 				{
-					Element Switch = engine.FindElement("Site Switch");
+					Element Switch = engine.FindElement("SAT-DOWN Site Switch");
 					if (trigger[2] == "SITE1")
 					{
 						setParam = "Switch Site 1";
@@ -361,16 +362,16 @@ namespace Signal_Problem_Detected_1
 						setParam = "Switch Site 2";
 						swTo = "SITE1";
 					}
+
 					Switch.SetParameter(setParam, 1);
 				}
 				else
 				{
-					Element Switch = engine.FindElement("Site Switch");
+					Element Switch = engine.FindElement("SAT-DOWN Site Switch");
 					engine.GenerateInformation("step 2 " + Switch.ElementName);
 
 					if ((trigger[2] == "SITE1" && Convert.ToString(Switch.GetParameter(300)) == "1") || (trigger[2] == "SITE2" && Convert.ToString(Switch.GetParameter(300)) == "2"))
 					{
-
 						Switch.SetParameter("Video Selection", "6");
 						string allowedGroups = ""; //"Skyline - Administrators;Administrator";
 						bool ok = engine.FindInteractiveClient(trigger[2] + " Signal Reception Failure", 100, allowedGroups, AutomationScriptAttachOptions.None);
@@ -468,12 +469,12 @@ namespace Signal_Problem_Detected_1
 									// Configure the dialog box
 									uib.RequireResponse = true;
 									uib.RowDefs = "a;a;a";
-									uib.ColumnDefs = "210;200;200";
+									uib.ColumnDefs = "210;200;140";
 
 									// Add a 'StaticText' item to the dialog box
 									UIBlockDefinition blockStaticText = new UIBlockDefinition();
 									blockStaticText.Type = UIBlockType.StaticText;
-									blockStaticText.Text = "Please specify why the switch was not executed.\r\nThis message will be sent to all noc users via mail.\r\n";
+									blockStaticText.Text = "Please specify why the switch was not executed.\r\nThis message will be sent to all NOC users via mail.\r\n";
 									blockStaticText.Row = 0;
 									blockStaticText.Column = 0;
 									blockStaticText.ColumnSpan = 3;
@@ -517,7 +518,7 @@ namespace Signal_Problem_Detected_1
 									// Configure the dialog box
 									uib.RequireResponse = true;
 									uib.RowDefs = "a;a;a";
-									uib.ColumnDefs = "200;200;200";
+									uib.ColumnDefs = "200;200;150";
 
 									// Add a 'StaticText' item to the dialog box
 									UIBlockDefinition blockStaticText = new UIBlockDefinition();
@@ -542,14 +543,11 @@ namespace Signal_Problem_Detected_1
 
 									// Display the dialog box
 									uir = engine.ShowUI(uib);
-
 								}
 								while (!uir.WasButtonPressed("btnContinue"));
 							}
 							else
 							{
-
-
 								//	Element Switch = engine.FindElement("Site Switch A");
 								if (trigger[2] == "SITE1")
 								{
@@ -563,6 +561,7 @@ namespace Signal_Problem_Detected_1
 									setVal = 1;
 									swTo = "SITE1";
 								}
+
 								Switch.SetParameter(setParam, setVal);
 
 								try
@@ -597,7 +596,7 @@ namespace Signal_Problem_Detected_1
 									// Configure the dialog box
 									uib.RequireResponse = true;
 									uib.RowDefs = "a;a;a";
-									uib.ColumnDefs = "200;200;200";
+									uib.ColumnDefs = "200;200;150";
 
 									// Add a 'StaticText' item to the dialog box
 									UIBlockDefinition blockStaticText = new UIBlockDefinition();
@@ -622,7 +621,6 @@ namespace Signal_Problem_Detected_1
 
 									// Display the dialog box
 									uir = engine.ShowUI(uib);
-
 								}
 								while (!uir.WasButtonPressed("btnContinue"));
 								Switch.SetParameter("Video Selection", "4");
